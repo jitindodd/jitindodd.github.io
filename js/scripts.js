@@ -1,19 +1,19 @@
 /*
-   
+
     Template Name : WebRes - Personal Resume Template
     Author : UiPasta Team
     Website : http://www.uipasta.com/
     Support : http://www.uipasta.com/support/
-	
-	
+
+
 */
 
 
 
 /*
-   
+
    Table Of Content
-   
+
    1. Preloader
    2. Smooth Scroll
    3. Scroll Naviagation Background Change with Sticky Navigation
@@ -25,7 +25,7 @@
    9. Magnific Popup
   10. Testimonial Carousel/Slider
   11. Statistics Counter
- 
+
 
 */
 
@@ -35,15 +35,14 @@
 
     jQuery(document).ready(function () {
 
-        
+
        /* Preloader */
-		
-        $(window).load(function () {
-            $('.preloader').delay(800).fadeOut('slow');
-        });
-		
-		
-		
+
+        // $(window).load(function () {
+        //     $('.preloader').delay(800).fadeOut('slow');
+        // });
+
+
        /* Smooth Scroll */
 
         $('a.smoth-scroll').on("click", function (e) {
@@ -53,12 +52,12 @@
             }, 1000);
             e.preventDefault();
         });
-		
 
 
-       
+
+
        /* Scroll Naviagation Background Change with Sticky Navigation */
-		 
+
         $(window).on('scroll', function () {
             if ($(window).scrollTop() > 100) {
                 $('.header-top-area').addClass('navigation-background');
@@ -66,12 +65,12 @@
                 $('.header-top-area').removeClass('navigation-background');
             }
         });
-		
-		
-		
-		
+
+
+
+
        /* Mobile Navigation Hide or Collapse on Click */
-		
+
         $(document).on('click', '.navbar-collapse.in', function (e) {
             if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
                 $(this).collapse('hide');
@@ -80,14 +79,14 @@
         $('body').scrollspy({
             target: '.navbar-collapse',
             offset: 195
-        
+
 		 });
-		 
-		
-		
-		
+
+
+
+
         /* Scroll To Top */
-		
+
         $(window).scroll(function(){
         if ($(this).scrollTop() >= 500) {
             $('.scroll-to-top').fadeIn();
@@ -95,48 +94,48 @@
             $('.scroll-to-top').fadeOut();
          }
 	   });
-	
-	
+
+
 	    $('.scroll-to-top').click(function(){
 		  $('html, body').animate({scrollTop : 0},800);
 		  return false;
 	    });
-		
 
-        
+
+
         /* Tooltip */
-         
+
          $(function () {
            $('[data-toggle="tooltip"]').tooltip()
            })
-		   
-		 
-        
+
+
+
         /* Ajaxchimp for Subscribe Form */
-		
+
          $('#mc-form').ajaxChimp();
-		   
-		   
-  
-		
+
+
+
+
         /* Portfolio Filtering */
 
         $('.portfolio-inner').mixItUp();
 
 
-       
+
         /* Magnific Popup */
 
         $('.portfolio-popup').magnificPopup({
             type: 'image',
-			
+
             gallery: { enabled: true },
 			zoom: { enabled: true,
 			        duration: 500
-					
+
           },
-		  
-		  
+
+
          image:{
                markup: '<div class="mfp-figure portfolio-pop-up">'+
                '<div class="mfp-close"></div>'+
@@ -151,11 +150,11 @@
                 return item.el.attr('title');
               }
             }
-		  
-		  
+
+
           });
-	   
-		 
+
+
         /* Testimonial Carousel/Slider */
 
         $(".testimonial-carousel-list").owlCarousel({
@@ -173,16 +172,16 @@
             pagination: false,
             transitionStyle : "fadeUp"
         });
-		
-		
-		
-		
+
+
+
+
         /* Statistics Counter */
-		
+
         $('.statistics').appear(function() {
            var counter = $(this).find('.statistics-count');
            var toCount = counter.data('count');
-      
+
            $(counter).countTo({
            from: 0,
            to: toCount,
@@ -190,8 +189,8 @@
            refreshInterval: 50
            })
            });
-              
-		   
+
+
             });
 
    })(jQuery);

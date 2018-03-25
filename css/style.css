@@ -1559,6 +1559,12 @@ tr > td:nth-child(2) {
 
 /* Company Logos */
 
+.yf_logo {
+  margin-top: 0.3em;
+  height: 70%;
+  width: 55%;
+}
+
 .dox_logo {
   margin-top: 0.5em;
   height: 60%;
